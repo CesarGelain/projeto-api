@@ -1,0 +1,1 @@
+CREATE EXTENSION unaccent SCHEMA pg_catalog;
