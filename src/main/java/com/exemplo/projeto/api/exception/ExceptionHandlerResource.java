@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.exemplo.projeto.api.ResponseErrorDTO;
+import com.exemplo.projeto.api.dto.ResponseErrorDTO;
 
 @ControllerAdvice
 public class ExceptionHandlerResource extends ResponseEntityExceptionHandler{
