@@ -36,5 +36,11 @@ public class PessoaService {
 		});		
 		return pessoa;
 	}
+	
+	public Pessoa atualizar(Pessoa pessoa) {
+		buscaPorId(pessoa.getId());
+		salvar(pessoa);
+		return pessoa;
+	}
 
 }
