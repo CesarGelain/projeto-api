@@ -55,5 +55,10 @@ public class PessoaService {
 		Specification<Pessoa> spec = specification.filtrar(filtro.getTermo());		
 		return pessoaRepository.findAll(spec, pageable);		
 	}
+	
+	public void excluir(Long id) {
+		Pessoa pessoa = buscaPorId(id);
+		pessoaRepository.delete(pessoa);
+	}
 
 }

@@ -3,14 +3,17 @@ package com.exemplo.projeto.api.resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.exemplo.projeto.api.dto.FiltroPessoasDTO;
@@ -43,6 +46,12 @@ public class PessoaResource {
 	public ResponseEntity<Pessoa> atualizar(@PathVariable("id") Long id, @RequestBody Pessoa pessoa) {
 		pessoa.setId(id);
 		return ResponseEntity.ok(service.atualizar(pessoa));		
+	}
+	
+	@DeleteMapping(value = "/{id}")
+	@ResponseStatus(HttpStatus.NO_CONTENT)
+	public void excluir(@PathVariable Long id) {
+		service.excluir(id);		
 	}
 
 }
