@@ -28,14 +28,14 @@ public class Pessoa extends BaseCadastro {
 	@NotNull(message = "Nenhum contato informado")
 	private List<Contato> contatos;
 	
-	public Pessoa() {}
+	public Pessoa() { }
 	
-	public Pessoa(Long id, String nome, String cpf, LocalDate dataNascimento) {
-		super(id, nome);
+	public Pessoa(String nome, String cpf, LocalDate dataNascimento) {
+		super(nome);
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;		
 	}
-
+	
 	public String getCpf() {
 		return cpf;
 	}

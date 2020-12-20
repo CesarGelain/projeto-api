@@ -32,7 +32,7 @@ public class PessoaValidation {
 		error.append(validarContatos(pessoa.getContatos()));
 		error.append(dataNascimentoFutura(pessoa.getDataNascimento()));
 		if (error.length() > 0) {
-			throw new RegraDeNegocioException(error.toString());
+			throw new RegraDeNegocioException(error.toString());			
 		}
 		return true;
 	}
