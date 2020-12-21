@@ -33,12 +33,12 @@ public class Contato extends BaseCadastro {
 	
 	public Contato() { }
 	
-	public Contato(Long id, String nome, Pessoa pessoa, String telefone, String email) {
-		super(id, nome);
+	public Contato(String nome, Pessoa pessoa, String telefone, String email) {
+		super(nome);
 		this.pessoa = pessoa;
 		this.telefone = telefone;
 		this.email = email;
-	}	
+	}
 	
 	public Pessoa getPessoa() {
 		return pessoa;

@@ -31,8 +31,7 @@ public class BaseCadastro {
 	
 	public BaseCadastro() {	}
 	
-	public BaseCadastro(Long id, String nome) {
-		this.id = id;
+	public BaseCadastro(String nome) {		
 		this.nome = nome;		
 	}
 
