@@ -81,6 +81,9 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -88,7 +91,7 @@
 	<distributionManagement>
 		<repository>
 			<uniqueVersion>false</uniqueVersion>
-			<id>1</id>			
+			<id>1</id>
 			<name>Repository</name>
 			<url>file:${user.home}/repo</url>
 			<layout>default</layout>
